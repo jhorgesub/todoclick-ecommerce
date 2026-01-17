@@ -1,59 +1,64 @@
-# LandingPage
+# 🛒 TodoClick - E-commerce Web Application
+> Everything you need, just one click away.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.5.
+This project is a **Modern E-commerce Web Application** built with **Angular 21**. It focuses on delivering a fast, fluid, and premium user experience by leveraging the power of **Angular Signals** and **Tailwind CSS**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Core Features
 
-```bash
-ng serve
-```
+* **Real-World API Integration:** Consumes data from [DummyJSON](https://dummyjson.com/) for products, categories, and details.
+* **State Management via Signals:** Utilizes the latest Angular reactive patterns for efficient data handling.
+* **Full Shopping Cart System:**
+    * Data persistence using `localStorage`.
+    * Real-time subtotal and total calculations.
+    * Quantity management and item removal.
+* **Premium User Interface:**
+    * Fully responsive design with **Tailwind CSS** and **Flowbite**.
+    * Floating "Back to Top" button with custom scroll logic.
+    * Interactive Checkout simulation with a dynamic countdown timer.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🛠️ Tech Stack
 
-## Code scaffolding
+* **Framework:** [Angular 21](https://angular.dev/) (Standalone Components).
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [Flowbite](https://flowbite.com/).
+* **Icons:** [Heroicons](https://heroicons.com/).
+* **API:** [DummyJSON](https://dummyjson.com/).
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+## 📦 Installation and Setup
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/todoclick-repo.git](https://github.com/your-username/todoclick-repo.git)
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Run the development server:**
+    ```bash
+    ng serve
+    ```
+    Navigate to `http://localhost:4200/` to view the application.
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## 📄 Development Notes (Localization)
 
-To build the project run:
+While built for global standards, the project includes specific localizations:
+* **Currency Formatting:** Adjusted for Argentine Peso format (**$1.500,00**).
+* **SSR Compatibility:** Optimized cart logic to prevent Server-Side Rendering (SSR) errors by safely handling `localStorage` checks.
 
-```bash
-ng build
-```
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 🔨 Roadmap / Future Improvements
 
-## Running unit tests
+- [ ] Integrate a real payment gateway (e.g., Mercado Pago or Stripe).
+- [ ] Add a search bar to filter products by name.
+- [ ] Implement dynamic product categories.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Developed with ⚡ by **Jorge Subeldia** - Full Stack Developer
