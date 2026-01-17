@@ -21,6 +21,7 @@ This project is a **Modern E-commerce Web Application** built with **Angular 21*
 ## 🛠️ Tech Stack
 
 * **Framework:** [Angular 21](https://angular.dev/) (Standalone Components).
+* **Node.js:** [v20.11+](https://nodejs.org/) / v22+ / v24+ (LTS recommended).
 * **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [Flowbite](https://flowbite.com/).
 * **Icons:** [Heroicons](https://heroicons.com/).
 * **API:** [DummyJSON](https://dummyjson.com/).
@@ -29,7 +30,8 @@ This project is a **Modern E-commerce Web Application** built with **Angular 21*
 
 ## 📦 Installation and Setup
 
-1.  **Clone the repository:**
+1.  **Prerequisites:** Ensure you have **Node.js v20.11, v22, or v24** installed.
+2.  **Clone the repository:**
     ```bash
     git clone [https://github.com/your-username/todoclick-repo.git](https://github.com/your-username/todoclick-repo.git)
     ```
