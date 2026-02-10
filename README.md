@@ -5,6 +5,24 @@ This project is a **Modern E-commerce Web Application** built with **Angular 21*
 
 ---
 
+## 🌐 Live Demo
+
+You can test the deployed version of this project on Vercel:
+
+**🔗 [TodoClick - Live Demo](https://todoclick-ecommerce.vercel.app)**
+
+### Testing the Application
+
+1. **Browse Products:** Explore the product catalog with real data from DummyJSON.
+2. **Add to Cart:** Click on any product to view details and add items to your shopping cart.
+3. **Shopping Cart:** Access the cart to review items, adjust quantities, and see real-time total calculations.
+4. **Checkout Simulation:** Complete the checkout process to experience the interactive countdown timer.
+5. **Responsive Design:** Test on different devices to see the mobile-first responsive design in action.
+
+> **Note:** This is a demonstration project with simulated checkout. No real transactions are processed.
+
+---
+
 ## 🚀 Core Features
 
 * **Real-World API Integration:** Consumes data from [DummyJSON](https://dummyjson.com/) for products, categories, and details.
