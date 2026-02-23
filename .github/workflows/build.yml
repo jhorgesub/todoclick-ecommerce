@@ -1,9 +1,13 @@
-name: Comnpilando mi aplicacion
+name: Compilando mi aplicacion
 
 on:
     push:
         branches:
             - main
+        paths:
+            - 'src/*'
+            - 'package.json'
+            - '  public/*'     
 
 jobs:
     build:
