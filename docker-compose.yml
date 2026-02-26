@@ -1,0 +1,27 @@
+services:
+  # Definición del servicio de frontend (Angular)
+  frontend:
+    # Nombre que tendrá el contenedor
+    container_name: todoclick-frontend
+
+    # Le decimos que construya la imagen basándose en el Dockerfile actual
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # Mapeo de puertos: puerto_local:puerto_contenedor
+    ports:
+      - "4200:4200"
+
+    # Volúmenes para "Hot-Reloading" (recarga en vivo de cambios)
+    volumes:
+      # Mapea tu código local hacia la carpeta /app del contenedor
+      - .:/app
+      # Protege los node_modules de Linux para que tu Windows no los sobreescriba
+      - todoclick-frontend:/app/node_modules
+
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+volumes:
+  todoclick-frontend:
