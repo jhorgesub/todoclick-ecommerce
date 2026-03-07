@@ -2,21 +2,41 @@ name: Compilando mi aplicacion
 
 on:
     push:
-        branches:
-            - main
+        branches: [ main ]
         paths:
             - 'src/*'
             - 'package.json'
             - '  public/*'     
 
 jobs:
-    build:
+    test: 
         runs-on: ubuntu-latest
-        steps:
+        environment: production
+        strategy: 
+            matrix:
+                node-version: [ 18.x, 22.x ]
+        steps: 
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
-              with:
-                node-version: 22
-            - run: npm install
-            - run: npm run build
-            
+            - run: npm ci
+            - run: npm test
+
+    build:
+        runs-on: ubuntu-latest
+        environment: production
+        needs: [ test ]
+        steps:
+        - uses: actions/checkout@v4
+        - uses: actions/setup-node@v4
+        - name:  Docker build to registry 
+          env:
+            REPOSITORY: node-api
+            IMAGE-TAG: $ {{ github.sha }}
+          run: docker build -t $REPOSITORY:$IMAGE-TAG .
+        - name: Configure AWS Credentials
+          uses: aws-actions/configure-aws-credentials@v4
+          with: 
+            role-to-assume: ${{secrets.AWS-ROLE}}
+            aws-region: sa-east-1
+        - name: Login to ECR
+          uses: aws-actions/amazon-ecr-login@v2
